@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llenado de Documentos</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="jspdf.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+    <header class="relative inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <img class="h-14 w-auto" src="Img/LogoCecy.png" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" id="menu-toggle" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="index.html" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Inicio</a>
+            <a href="Documentos.html" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Documentos</a>
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Tramites</a>
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Subida Documentos</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Iniciar sesión <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </nav>
+    
+        <!-- Menú móvil, mostrar/ocultar según el estado de apertura del menú -->
+        <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+          <!-- Fondo de fondo, mostrar/ocultar según el estado del menú -->
+          <div class="fixed inset-0 z-50 bg-black opacity-30"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-rojoOficial px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-10 w-auto" src="Img/LogoCecy.png" alt="">
+              </a>
+              <button type="button" id="menu-close" class="-m-2.5 rounded-md p-2.5 text-white">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-white">
+                <div class="space-y-2 py-6">
+                  <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Inicio</a>
+                  <a href="Documentos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Documentos</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Tramites</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Subida Documentos</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Iniciar sesión</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <h1 class="text-4xl font-bold text-center mb-8 text-rojoOficial font-quicksand">Llenado de anexo 1</h1>
+
+    <form id="form"class="space-y-8">
+        <!-- Datos Personales -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Datos Personales</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre del Alumno</label>
+              <input type="text" id="nombre" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+              <input type="tel" id="telefono" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="correo" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+              <input type="email" id="correo" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="facebook" class="block text-sm font-medium text-gray-700">Facebook</label>
+              <input type="text" id="facebook" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="carrera" class="block text-sm font-medium text-gray-700">Carrera</label>
+              <input type="text" id="carrera" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="grupo" class="block text-sm font-medium text-gray-700">Grupo</label>
+              <input type="text" id="grupo" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Datos del Lugar -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Datos del Lugar</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="secretaria" class="block text-sm font-medium text-gray-700">Secretaría a la que Pertenece</label>
+              <input type="text" id="secretaria" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="institucion" class="block text-sm font-medium text-gray-700">Nombre de la Institución</label>
+              <input type="text" id="institucion" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="cct" class="block text-sm font-medium text-gray-700">Clave de Centro de Trabajo (CCT)</label>
+              <input type="text" id="cct" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="calle" class="block text-sm font-medium text-gray-700">Calle (Exterior, Interior, Manzana, Lote, etc.)</label>
+              <input type="text" id="calle" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="colonia" class="block text-sm font-medium text-gray-700">Colonia</label>
+              <input type="text" id="colonia" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="municipio" class="block text-sm font-medium text-gray-700">Municipio</label>
+              <input type="text" id="municipio" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="codigo_postal" class="block text-sm font-medium text-gray-700">Código Postal</label>
+              <input type="text" id="codigo_postal" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="telefono_lugar" class="block text-sm font-medium text-gray-700">Teléfono</label>
+              <input type="tel" id="telefono_lugar" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="referencia" class="block text-sm font-medium text-gray-700">Referencia</label>
+              <input type="text" id="referencia" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Datos del Funcionario -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Datos del Funcionario</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="nombre_funcionario" class="block text-sm font-medium text-gray-700">Nombre del Funcionario</label>
+              <input type="text" id="nombre_funcionario" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="escolaridad" class="block text-sm font-medium text-gray-700">Escolaridad</label>
+              <input type="text" id="escolaridad" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="cargo" class="block text-sm font-medium text-gray-700">Cargo</label>
+              <input type="text" id="cargo" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Actividades a Realizar -->
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h2 class="text-xl font-semibold mb-4">Actividades a Realizar</h2>
+          
+          <div class="grid grid-cols-1 gap-6">
+            <div>
+              <label for="actividad1" class="block text-sm font-medium text-gray-700">Actividad 1</label>
+              <input type="text" id="actividad1" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="actividad2" class="block text-sm font-medium text-gray-700">Actividad 2</label>
+              <input type="text" id="actividad2" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="actividad3" class="block text-sm font-medium text-gray-700">Actividad 3</label>
+              <input type="text" id="actividad3" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="actividad4" class="block text-sm font-medium text-gray-700">Actividad 4</label>
+              <input type="text" id="actividad4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+              <label for="actividad5" class="block text-sm font-medium text-gray-700">Actividad 5</label>
+              <input type="text" id="actividad5" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="bg-rojoOficial hover:bg-red-900 mx-auto text-white font-bold py-2 px-4 rounded">Enviar</button>
+      </form>
+     
+      <script>
+        // Selecciona el botón del menú móvil y el menú en sí
+        const mobileMenuButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeButton = document.getElementById('menu-close');
+        
+        // Agrega un event listener al botón de abrir
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Agrega un event listener al botón de cerrar
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+      
+</body>
+</html>

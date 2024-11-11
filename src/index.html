@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <img class="h-14 w-auto" src="Img/LogoCecy.png" alt="">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" id="menu-toggle" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="index.html" class="text-sm/6 font-semibold text-white border-b border-transparent hover:border-white font-quicksand">Inicio</a>
+          <a href="Documentos.html" class="text-sm/6 font-semibold text-white border-b border-transparent hover:border-white font-quicksand">Documentos</a>
+          <a href="#" class="text-sm/6 font-semibold text-white border-b border-transparent hover:border-white font-quicksand">Tramites</a>
+          <a href="#" class="text-sm/6 font-semibold text-white border-b border-transparent hover:border-white font-quicksand">Subida Documentos</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm/6 font-semibold text-white border-b border-transparent hover:border-white font-quicksand">Iniciar sesión <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+  
+      <!-- Menú móvil, mostrar/ocultar según el estado de apertura del menú -->
+      <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+        <!-- Fondo de fondo, mostrar/ocultar según el estado del menú -->
+        <div class="fixed inset-0 z-50 bg-black opacity-30"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-rojoOficial px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <img class="h-10 w-auto" src="Img/LogoCecy.png" alt="">
+            </a>
+            <button type="button" id="menu-close" class="-m-2.5 rounded-md p-2.5 text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white">
+              <div class="space-y-2 py-6">
+                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Inicio</a>
+                <a href="Documentos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Documentos</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Tramites</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Subida Documentos</a>
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Iniciar sesión</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+
+    <section class="relative h-screen flex items-center justify-center">
+      <!-- Imagen de fondo -->
+      <div 
+          class="absolute inset-0 bg-cover bg-center z-0" 
+          style="background-image: url('Img/fondo2.jpg');"
+          aria-hidden="true"
+      ></div>
+      
+      <!-- Overlay para mejorar la legibilidad del texto -->
+      <div class="absolute inset-0 bg-black opacity-50 z-10" aria-hidden="true"></div>
+      
+      <!-- Contenido -->
+      <div class="relative z-20 text-center text-white px-4 sm:px-6 lg:px-8 backdrop-blur-lg">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-rojoOficial font-quicksand">
+              Servicio Social
+          </h1>
+          <p class="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+          </p>
+          <a href="#" class="inline-block bg-rojoOficial hover:bg-red-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300 font-quicksand">
+              Iniciar trámites
+          </a>
+      </div>
+  </section>
+   
+  
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-rojoOficial font-quicksand">Servicio Social en CECyTEM</h2>
+        
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-8 mb-12">
+            <!-- Video -->
+            <div class="w-full lg:w-1/2 max-w-2xl">
+                <video src="Videos/videoinfomativo.mp4" controls autoplay></video>
+            </div>
+            
+            <!-- Imagen de la mascota -->
+            <div class="w-full lg:w-1/4 max-w-xs">
+                <img src="Img/Cecyto-Photoroom.png" alt="Mascota del CECyTEM" class="max-w-full h-auto mix-blend-normal">
+            </div>
+        </div>
+        
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-center text-rojoOficial font-quicksand">¿Qué es el Servicio Social?</h3>
+            <p class="text-gray-700 max-w-3xl mx-auto text-center">
+                El Servicio Social es una actividad temporal y obligatoria que permite al estudiante del CECyTEM poner en práctica los conocimientos adquiridos en beneficio de la sociedad y de su formación profesional. Tiene una duración mínima de 480 horas, que deben cumplirse en un período no menor a seis meses ni mayor a dos años.
+            </p>
+        </div>
+        
+        <h3 class="text-2xl font-semibold mb-6 text-center text-rojoOficial font-quicksand">Requisitos para realizar el Servicio Social</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Requisito 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Avance Académico</h4>
+                <p class="text-gray-700">Haber cubierto el 70% de los créditos del plan de estudios correspondiente.</p>
+            </div>
+            
+            <!-- Requisito 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Documentación</h4>
+                <p class="text-gray-700">Presentar solicitud de servicio social y carta de presentación emitida por la institución.</p>
+            </div>
+            
+            <!-- Requisito 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Institución Receptora</h4>
+                <p class="text-gray-700">Contar con una institución pública o privada que tenga convenio con el CECyTEM.</p>
+            </div>
+            
+            <!-- Requisito 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Plan de Trabajo</h4>
+                <p class="text-gray-700">Presentar un plan de trabajo aprobado por la institución receptora y el CECyTEM.</p>
+            </div>
+            
+            <!-- Requisito 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+              <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Seguro Médico</h4>
+              <p class="text-gray-700">Contar con seguro médico vigente (IMSS, ISSSTE, u otro).</p>
+          </div>
+            
+            <!-- Requisito 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                <h4 class="text-xl font-semibold mb-2 text-rojoOficial font-quicksand">Cumplimiento de Normas</h4>
+                <p class="text-gray-700">Comprometerse a cumplir con las normas y reglamentos de la institución receptora y del CECyTEM.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-rojoOficial font-quicksand">Contáctanos</h2>
+        
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Formulario de contacto -->
+            <div class="w-full md:w-2/3">
+                <form class="bg-white shadow-md rounded-lg p-8">
+                    <div class="mb-4">
+                        <label for="name" class="block text-rojoOficial text-sm font-bold mb-2 font-quicksand">Nombre</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-rojoOficial text-sm font-bold mb-2 font-quicksand">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-rojoOficial text-sm font-bold mb-2 font-quicksand">Asunto</label>
+                        <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-rojoOficial text-sm font-bold mb-2 font-quicksand">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-rojoOficial hover:bg-red-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            Enviar mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Información de contacto -->
+            <div class="w-full md:w-1/3">
+                <div class="bg-white shadow-md rounded-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4 text-rojoOficial font-quicksand">Información de contacto</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="mr-2"></i>
+                            <span>Av. Principal #123, Ciudad, Estado, CP 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2"></i>
+                            <span>+52 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2"></i>
+                            <span>contacto@cecytem.edu.mx</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="clock" class="mr-2"></i>
+                            <span>Lunes a Viernes: 9:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold mb-2 text-rojoOficial font-quicksand">Síguenos en:</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/CecytemPlantelIxtapaluca2/?locale=es_LA" class="text-gray-600 hover:text-blue-500">
+                                <i data-feather="facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/CecytemIxtapal2?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-gray-600 hover:text-blue-400">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/somoscecytem/?hl=es" class="text-gray-600 hover:text-pink-500">
+                                <i data-feather="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-rojoOficial text-white">
+  <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Columna 1: Acerca de -->
+          <div>
+              <h3 class="text-lg font-semibold mb-4 font-quicksand">Acerca de CECyTEM</h3>
+              <p class="text-gray-300 mb-4">
+                  El Colegio de Estudios Científicos y Tecnológicos del Estado de México es una institución educativa comprometida con la formación integral de sus estudiantes.
+              </p>
+              <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-quicksand">Leer más</a>
+          </div>
+
+          <!-- Columna 2: Enlaces rápidos -->
+          <div>
+              <h3 class="text-lg font-semibold mb-4 font-quicksand">Enlaces rápidos</h3>
+              <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Inicio</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Documentos</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Tramites</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Subida Documentos</a></li>
+              </ul>
+          </div>
+
+          <!-- Columna 3: Contacto -->
+          <div>
+              <h3 class="text-lg font-semibold mb-4 font-quicksand">Contacto</h3>
+              <ul class="space-y-2">
+                  <li class="flex items-center">
+                      <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                      <span>Av. Principal #123, Ciudad, Estado, CP 12345</span>
+                  </li>
+                  <li class="flex items-center">
+                      <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                      <span>+52 (123) 456-7890</span>
+                  </li>
+                  <li class="flex items-center">
+                      <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                      <span>contacto@cecytem.edu.mx</span>
+                  </li>
+                  <li class="flex items-center">
+                      <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                      <span>Lun - Vie: 9:00 AM - 5:00 PM</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Redes sociales y derechos de autor -->
+      <div class="mt-8 pt-8 border-t border-white">
+          <div class="flex flex-col sm:flex-row justify-between items-center">
+              <div class="flex space-x-6 mb-4 sm:mb-0">
+                <a href="https://www.facebook.com/CecytemPlantelIxtapaluca2/?locale=es_LA" class="text-gray-300 hover:text-blue-500">
+                  <i data-feather="facebook"></i>
+              </a>
+              <a href="https://twitter.com/CecytemIxtapal2?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-gray-300 hover:text-blue-400">
+                  <i data-feather="twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/somoscecytem/?hl=es" class="text-gray-300 hover:text-pink-500">
+                  <i data-feather="instagram"></i>
+              </a>
+              </div>
+              <p class="text-gray-400 font-quicksand">&copy; 2024 CECyTEM. Todos los derechos reservados.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script>
+feather.replace()
+</script>
+
+  <script>
+    // Selecciona el botón del menú móvil y el menú en sí
+    const mobileMenuButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeButton = document.getElementById('menu-close');
+    
+    // Agrega un event listener al botón de abrir
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Agrega un event listener al botón de cerrar
+    closeButton.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body>
+</html>

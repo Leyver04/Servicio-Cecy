@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Social CECyTEM Ixtapaluca 2</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header class="relative border-b border-white inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <img class="h-14 w-auto" src="Img/LogoCecy.png" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" id="menu-toggle" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="index.html" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Inicio</a>
+            <a href="Documentos.html" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Documentos</a>
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Tramites</a>
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Subida Documentos</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" class="text-sm/6 font-semibold text-black border-b border-transparent hover:border-black font-quicksand">Iniciar sesión <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </nav>
+    
+        <!-- Menú móvil, mostrar/ocultar según el estado de apertura del menú -->
+        <div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+          <!-- Fondo de fondo, mostrar/ocultar según el estado del menú -->
+          <div class="fixed inset-0 z-50 bg-black opacity-30"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-rojoOficial px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-10 w-auto" src="Img/LogoCecy.png" alt="">
+              </a>
+              <button type="button" id="menu-close" class="-m-2.5 rounded-md p-2.5 text-white">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-white">
+                <div class="space-y-2 py-6">
+                  <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Inicio</a>
+                  <a href="Documentos.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Documentos</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Tramites</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Subida Documentos</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-red-900 font-quicksand">Iniciar sesión</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="container mx-auto px-4 pt-32 pb-50">
+        <h1 class="text-4xl font-bold text-center mb-8 text-rojoOficial font-quicksand">Servicio Social CECyTEM Ixtapaluca 2</h1>
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+            <section class="animate-fade-in">
+                <h2 class="text-2xl font-semibold mb-4 text-rojoOficial text-center font-quicksand">Documentos de Inscripción</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Anexo 1</h3>
+                            <p class="text-gray-600 text-sm mb-4">Formato de solicitud para iniciar el servicio social</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="Img/anexo1.png" alt="Vista previa de Solicitud de Inscripción" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="Docs/ANEXO 1 2024.pdf" download class="text-blue-500 hover:text-blue-700 transition-colors duration-300" aria-label="Descargar Solicitud de Inscripción">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                </a>
+                                <a href="Anexo1.html" class="text-green-500 hover:text-green-700 transition-colors duration-300" aria-label="Llenar Solicitud de Inscripción">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Carta Aceptacion</h3>
+                            <p class="text-gray-600 text-sm mb-4">Documento de compromiso con la institución</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="Img/carta aceptacion.png" alt="Vista previa de Carta Compromiso" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="Img/carta aceptacion.png" download class="text-green-500 hover:text-green-700 transition-colors duration-300" aria-label="Llenar Carta Compromiso">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Otro Documento</h3>
+                            <p class="text-gray-600 text-sm mb-4">Descripción de las actividades a realizar</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="/placeholder.svg?height=128&width=256" alt="Vista previa de Plan de Trabajo" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="/path-to-your-document.pdf" download class="text-blue-500 hover:text-blue-700 transition-colors duration-300" aria-label="Descargar Plan de Trabajo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-green-500 hover:text-green-700 transition-colors duration-300" aria-label="Llenar Plan de Trabajo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="animate-fade-in" style="animation-delay: 0.2s;">
+                <h2 class="text-2xl font-semibold mb-4 text-rojoOficial text-center font-quicksand">Documentos de Liberación</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Informe Trimestral</h3>
+                            <p class="text-gray-600 text-sm mb-4">Informa todo lo realizado durante el servicio</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="Img/informe trimestral.png" alt="Vista previa de Reporte Final" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="Docs/informe trimestral.pdf" download class="text-blue-500 hover:text-blue-700 transition-colors duration-300" aria-label="Descargar Reporte Final">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-green-500 hover:text-green-700 transition-colors duration-300" aria-label="Llenar Reporte Final">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Informe Global</h3>
+                            <p class="text-gray-600 text-sm mb-4">Documento que acredita la finalización del servicio</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="Img/informe global.png" alt="Vista previa de Carta de Terminación" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="Docs/informe global.pdf" download class="text-blue-500 hover:text-blue-700 transition-colors duration-300" aria-label="Descargar Carta de Terminación">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg mb-2">Carta Liberacion</h3>
+                            <p class="text-gray-600 text-sm mb-4">Confirma que se realizo el servicio social de manera satisfactoria</p>
+                            <div class="bg-gray-200 h-32 mb-4 flex items-center justify-center rounded-md overflow-hidden">
+                                <img src="Img/carta de liberacion.png" alt="Vista previa de Evaluación del Servicio" class="object-cover w-full h-full">
+                            </div>
+                            <div class="flex justify-around">
+                                <a href="Img/carta de liberacion.png" class="text-green-500 hover:text-green-700 transition-colors duration-300" aria-label="Llenar Evaluación del Servicio">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-rojoOficial text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Columna 1: Acerca de -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-quicksand">Acerca de CECyTEM</h3>
+                    <p class="text-gray-300 mb-4">
+                        El Colegio de Estudios Científicos y Tecnológicos del Estado de México es una institución educativa comprometida con la formación integral de sus estudiantes.
+                    </p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 transition duration-300 font-quicksand">Leer más</a>
+                </div>
+      
+                <!-- Columna 2: Enlaces rápidos -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-quicksand">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Documentos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Tramites</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Subida Documentos</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Columna 3: Contacto -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-quicksand">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2"></i>
+                            <span>Av. Principal #123, Ciudad, Estado, CP 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span>+52 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span>contacto@cecytem.edu.mx</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                            <span>Lun - Vie: 9:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+      
+            <!-- Redes sociales y derechos de autor -->
+            <div class="mt-8 pt-8 border-t border-white">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <div class="flex space-x-6 mb-4 sm:mb-0">
+                      <a href="https://www.facebook.com/CecytemPlantelIxtapaluca2/?locale=es_LA" class="text-gray-300 hover:text-blue-500">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/CecytemIxtapal2?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-gray-300 hover:text-blue-400">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/somoscecytem/?hl=es" class="text-gray-300 hover:text-pink-500">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    </div>
+                    <p class="text-gray-400 font-quicksand">&copy; 2024 CECyTEM. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+      </footer>
+
+      <script>
+        feather.replace()
+        </script>
+        
+          <script>
+            // Selecciona el botón del menú móvil y el menú en sí
+            const mobileMenuButton = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeButton = document.getElementById('menu-close');
+            
+            // Agrega un event listener al botón de abrir
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Agrega un event listener al botón de cerrar
+            closeButton.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        </script>
+</body>
+</html>
